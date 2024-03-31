@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="./scripts/script.js" type=application/javascript></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap">
+    <title>Stay Healthy</title>
+</head>
+<body>
+    <div class = "main-page">
+    <div class="top-navbar">
+        <div class="logo">HealthIsVital</div>
+        <div class="navigation">
+            <a href="profile.html">My Profile</a>
+            <a href="about.html">About</a>
+            <a href="/help">Help</a>
+            <a href="/logout">Logout</a>
+        </div>
+    </div>
+    <div class="div-3">
+    <div class="container">
+        <div class="input-container">
+                <input type="text" name="food" class="food-input" placeholder="Eg rice,cerel,milk" required>
+                <button type="submit" class="getResults">Analyze</button>
+        </div>
+        <div class="add-discard">
+            <button type="submit"  class="add-discard-button">Add</button>
+            <button type="submit"  class="add-discard-button">Discard</button>
+        </div>
+        
+
+    <div class="info-container">
+        <div class="info">
+          <table>
+              <thead>
+                  <tr id="ftr">
+                      <th class="fth">Qty</th>
+                      <th class="fth">Unit</th>
+                      <th class="fth">Food</th>
+                      <th class="fth">Calories</th>
+                      <th class="fth">Weight</th>
+                  </tr>
+              </thead>
+              <tbody id="getDetails">
+                  <tr>
+                      <td class="fth"></td>
+                      <td class="fth"></td>
+                      <td class="fth"></td>
+                      <td class="fth"></td>
+                      <td class="fth"></td>
+                  </tr>
+                  
+                  
+              </tbody>
+          </table> 
+        </div>
+      </div>
+            
+    </div>
+
+
+    <div class="nutrients-container">
+        <div class="nutrients-div">
+            <div class="header">
+                <h1 class="nutrition-title">Nutrition Facts</h1>
+                <div class="grey-bar"></div>
+                
+            </div>
+            <div class="serving-div">
+                <span class="serving">Amount Per Serving</span>
+            </div>
+            <div class="calorie-count-div">
+                <span class="ENERC_KCAL">Calories</span>
+                <span class="ENERC_KCAL-percent">-</span>
+                
+            </div>
+            
+            <div class="small-info">
+                <div class="sec-grey-bar"></div>
+                <b style="text-align:right; margin-right: 14px; font-size: 10px;">% Daily Value*</b>
+            </div>
+
+            <div class="info-div">
+                <div class="row-partition"></div>
+                <div class="total-fat-div">
+                    <span class="FAT">Total Fat -</span>
+                    <span class="FAT-percent">-</span>
+                </div>
+
+
+                <div class="sub-row-partition"></div>
+                <div class="secondary-info-div">
+                    <span class="FASAT">Saturated Fat -</span>
+                    <span class="FASAT-percent">-</span>
+                </div>
+
+                <div class="row-partition"></div>
+                <div class="total-fat-div">
+                    <span class="CHOLE">Cholestrol -</span>
+                    <span class="CHOLE-percent">-</span>
+                </div>
+
+                <div class="row-partition"></div>
+                <div class="total-fat-div">
+                    <span class="NA">Sodium -</span>
+                    <span class="NA-percent">-</span>
+                </div>
+
+                <div class="row-partition"></div>
+                <div class="total-fat-div">
+                    <span class="CHOCDF">Total Carbohydrate -</span>
+                    <span class="CHOCDF-percent">-</span>
+                </div>
+
+                <div class="sub-row-partition"></div>
+                <div class="secondary-info-div">
+                    <span class="FIBTG">Dietary Fiber -</span>
+                    <span class="FIBTG-percent">-</span>
+                </div>
+
+                <div class="sub-row-partition"></div>
+                <div class="secondary-info-div">
+                    <span class="SUGAR">Total Sugar -</span>
+                    <span class="SUGAR-percent">-</span>
+                </div>
+
+               <div class="sub-row-partition"></div>
+                <div class="secondary-info-div">
+                    <span class="SUGAR">Includes - Added Sugars</span>
+                </div> 
+
+                <div class="row-partition"></div>
+                <div class="total-fat-div">
+                    <span class="PROCNT">Protein -</span>
+                    <span class="PROCNT-percent">-</span>
+                </div>
+                <div class="row-partition"></div>
+                <div class="total-fat-div">
+                    <span class="VITD">Vitamin D -</span>
+                    <span class="VITD-percent">-</span>
+                </div>
+                <div class="row-partition"></div>
+                <div class="total-fat-div">
+                    <span class="CA">Calcium -</span>
+                    <span class="CA-percent">-</span>
+                </div>
+                <div class="row-partition"></div>
+                <div class="total-fat-div">
+                    <span class="FE">Iron -</span>
+                    <span class="FE-percent">-</span>
+                </div>
+                <div class="row-partition"></div>
+                <div class="total-fat-div">
+                    <span style="font-weight: 400;" class="K">Potassium -</span>
+                    <span class="K-percent">-</span>
+                </div>
+
+                <p class="notice">*Percent Daily Values are based on a 2000 calorie diet</p>
+                
+            </div>
+           
+       </div>
+       </div>
+
+       <div class="right-container">
+        <div id="donutchart" style="margin-left: 10px; width: 500px; height: 300px;"></div>
+        <div id="donutchart2" style="margin-left: 10px; width: 500px; height: 300px;"></div>
+            
+        </div> 
+
+        
+    </div>
+
+    <div class="div-6">
+        <div id="columnChart" style="margin-left: 10px; width: 1200px; height: 500px;"></div>
+    </div>
+
+    
+</div>
+
+
+</body>
+</html>

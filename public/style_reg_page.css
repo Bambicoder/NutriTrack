@@ -1,0 +1,251 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h2{
+    text-align: center;
+    padding-bottom: 9px;
+}
+
+body, html {
+    height:  100%;
+    width: 100%;
+    font-family: 'Helvetica,sans-serif', sans-serif;
+    font-size: 16px;
+    background-size: cover; 
+    overflow: hidden;
+    
+  }
+.main-register{
+    display: flex;
+    justify-content: right;
+    padding-top: 22px;
+    background: url("/waldemar-Yf216RUTndU-unsplash.jpg");
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 32px;
+    background-position: center center; 
+    background-repeat: no-repeat; 
+  }
+
+  .main-register::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Adjust the opacity (last value) as needed */
+  }
+
+  .register {
+    width: 30%;
+    margin-right: 100px;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    color: #fff;
+}
+
+.register-container {
+    max-height: 80vh; /* Set a maximum height for the container */
+     /* Add vertical scrolling when content exceeds the container height */
+}
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form input[type="password"],
+select{
+    width: 50%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: none; /* Remove the border */
+    background: rgba(255, 255, 255, 1); /* Set a semi-transparent white background */
+    backdrop-filter: blur(5px); /* Set a transparent background */
+}
+form input[type="text"]{
+    width: 75%;
+    border-radius: 5px;
+    
+}
+form input[type="radio"]{
+    margin-left: 25px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none; 
+    appearance: none; 
+}
+
+
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 9px;
+    background-color: #fff;;
+    border:none;
+    border-radius: 4px;
+    color: #000; 
+    cursor: pointer;
+    transition: background 0.3s;
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+
+
+.submit-button:hover {
+    background: lightgray;
+    
+}
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="number"]::placeholder {
+    font-size: 12px;
+    width: 500px;
+}
+#register{
+    padding:10px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form input[type="password"],
+select{
+    width: 50%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 3px;
+    border: none; 
+    background: rgba(255, 255, 255, 1);
+    backdrop-filter: blur(5px); 
+}
+
+form input[type="text"]{
+    width: 75%;
+    border-radius: 5px;
+    
+}
+form input[type="radio"]{
+    margin-left: 25px;
+}
+
+.name-inputs {
+    display: flex;
+}
+.name-input {
+    margin-bottom: 10px;
+}
+.input-block{
+     display: block;
+}
+
+.login-link{
+    text-align: center;
+    margin-top: 10px;
+    color:black;
+    
+   }
+
+.login-link a {
+    text-decoration: none; 
+    color: #fff;
+}
+.login-link a:hover {
+    color: #03a81f;
+}
+
+.login-title{
+    padding-bottom: 15px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none; 
+    appearance: none; 
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="number"]::placeholder {
+    font-size: 12px;
+    width: 500px;
+}
+#register{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.wrapper{
+    display:flex;
+    margin-left: 40px;
+  }
+  
+  .static-txt {
+    font-size: 75px;
+    font-weight: 800;
+    color: white; 
+    margin-right: 16px;
+    display: inline;
+    position: relative;
+  }
+  
+  .dynamic-txts {
+    display: inline;
+    position: absolute;
+    overflow: hidden;
+    opacity: 0;
+    animation-name: textFader;
+    animation-duration: 18s; 
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    font-family: sans-serif;
+    color: orangered;
+    font-size: 75px;
+    font-weight: 800;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+  
+.dynamic-txts:nth-child(1) {
+
+  animation-delay: 0s;
+}
+
+.dynamic-txts:nth-child(2) {
+  
+  animation-delay: 6s;
+
+}
+
+.dynamic-txts:nth-child(3) {
+  
+  animation-delay: 12s;
+
+}
+
+@keyframes textFader {
+  0% {
+    opacity: 0;
+  } /* fade-in */
+  11% {
+    opacity: 1;
+  } /* show */
+  22% {
+    opacity: 1;
+  } /* fade-out */
+  33% { /* <-------------------{ 100% / num(H2) = 33% } */
+    opacity: 0;
+  } /* waiting for the finish animation of other blocks */
+  100% {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <link rel="stylesheet" type="text/css" href="style_reg_page.css">
+    <script src="../script.js" type=application/javascript ></script>
+    
+    <title>Registration</title>
+</head>
+<body>
+    <div class = "main-register">
+        <div class="wrapper">
+            <div class="static-txt">Health is</div>
+            <div class="dyn-div">
+              <h2 class="dynamic-txts">Vital</h2>
+              <h2 class="dynamic-txts">Victory</h2>
+              <h2 class="dynamic-txts">VVealth</h2>
+            </div>
+          </div>
+        <div class = "register">
+            <h2>Register Yourself</h2>
+            <form id ="register" action="/registration" method = "POST"  enctype="application/x-www-form-urlencoded">
+                <div class="name-inputs">
+                    <div class="name-input">
+                        <label for="fname">First Name :</label>
+                        <input  class="input-block" type="text" name="first_name" 
+                        id="fname" placeholder="first name" maxlength="50">
+                    </div>
+                    <div class="name-input">
+                        <label for="lname" class="input-block" >Last Name :</label>
+                        <input class="input-block" type="text" name="last_name" 
+                        id="lname" placeholder="last name"  maxlength="50">
+                    </div>
+                </div>
+               
+                <label for="email">Email Id :  </label>
+                <input type="email" name="email" id="email"
+                placeholder="email id"  maxlength="30">
+                <br><br>
+                <label for="password">Password : </label>
+                <input type="password" name="password" id="password" 
+                placeholder="Minimum 8 characters"  maxlength="10">
+                <br><br>
+                <label for="age">Age : </label>
+               
+                <input type="number" name="age" id="number"
+                placeholder="age" maxlength="100">
+                <br><br>
+                <label for="gender">Gender : </label>
+               <input type="radio" name="gender" value= "male" id="male">
+               <label for = "male">Male</label>
+               <input type="radio" name="gender" value= "female" id="female">
+               <label for = "female">Female</label>
+               <br><br>
+               <label for="height"> Height(in cm) :  </label>
+               
+               <input type="number" step="0.01" name="height" id="height"
+               placeholder="height">
+               <br><br>
+               <label for="weight">Weight(in kgs) : </label>
+               
+               <input type="number" step="0.01" name="weight" id="weight"
+               placeholder="weight">
+               <br><br>
+               <label for="activity"> Physical Activity Level : </label>
+               <select name="activity_level" id="activity-level">
+                <option value="sedentary">Sedentary</option>
+                <option value="lightly-active">Lightly Active</option>
+                <option value="moderately-active">Moderately Active</option>
+                <option value="very-active">Very Active</option>
+                <option value="super-active">Super Active</option>
+            </select><br>
+            <button type="submit" class="submit-button">Submit</button>
+
+            </form>
+        <p class="login-link">Already Registered? <a href="/login">Login</a></p>
+        </div>
+    </div>
+    
+</body>
+</html>
